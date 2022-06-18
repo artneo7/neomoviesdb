@@ -1,0 +1,80 @@
+:root {
+  --feat: #FF3E00;
+  --green: #00A100;
+  --black: #1E1D1D;
+  --gray: #9F9B9A;
+  --gray-2: #484848;
+  --gradient: linear-gradient(90deg, #434343 0%, #000000 100%);
+}
+/* Add custom fonts with @font-face */
+/* @font-face { 
+	font-family: "Manrope"; 
+	src: url('fonts/Manrope-Medium.ttf') format("opentype"); 
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face { 
+	font-family: "Manrope"; 
+	src: url('fonts/Manrope-Bold.ttf') format("opentype"); 
+  font-style: normal;
+  font-weight: bold;
+} */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: var(--gradient);
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrap {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.btn {
+  padding: 16px;
+  background: var(--gradient);
+  color: #fff;
+  border-radius: 4px;
+}
+.btn--alt {
+  background: var(--feat);
+}
+.hide {
+  visibility: hidden;
+}
+.slider {
+  margin-top: 16px;
+}
+.splide__slide {
+  border-radius: 8px;
+  overflow: hidden;
+}
