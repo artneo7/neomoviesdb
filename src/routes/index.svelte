@@ -17,8 +17,15 @@ import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 import '@splidejs/svelte-splide/css/core';
 import PopularMovies from '../components/PopularMovies.svelte';
 import Search from '../components/Search.svelte';
+import { MetaTags } from 'svelte-meta-tags';
 
 </script>
+
+<MetaTags
+  title="NeoMoviesDB"
+  noindex
+  nofollow
+/>
 
 <main>
   <section class="intro">

@@ -18,6 +18,7 @@ import IconRating from "../../components/icons/IconRating.svelte";
 import IconRuntime from "../../components/icons/IconRuntime.svelte";
 
 import { fade } from 'svelte/transition';
+import { MetaTags } from "svelte-meta-tags";
 
 import { createLoadObserver } from '../../helper/util';
 let skeleton = true;
@@ -54,6 +55,13 @@ function convertMinutes(n) {
 const money = new Intl.NumberFormat('us',
   { style:'currency', currency: 'USD' });
 </script>
+
+<MetaTags
+  title={movieDetail.title}
+  titleTemplate="%s | NeoMoviesDB"
+  noindex
+  nofollow
+/>
 
 <div class="single">
   <div class="single__background" style="background-image: url({'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path})" in:fade={{ duration: 300 }}></div>
