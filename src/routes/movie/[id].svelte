@@ -20,13 +20,6 @@ import IconRuntime from "../../components/icons/IconRuntime.svelte";
 import { fade } from 'svelte/transition';
 import { MetaTags } from "svelte-meta-tags";
 
-import { createLoadObserver } from '../../helper/util';
-let skeleton = true;
-const onload = createLoadObserver(() => {
-  skeleton = false;
-});
-$: imageOpacity = skeleton ? 0 : 1;
-
 export let movieDetail;
 
 // Convert runtime to hours and minutes
@@ -72,10 +65,8 @@ const money = new Intl.NumberFormat('us',
     <h1 class="title">{movieDetail.title}</h1>
     <div class="single__info">
       <div class="single__img-wrapper">
-        {#if skeleton}
         <div class="skeleton"></div>
-        {/if}
-        <img use:onload style="opacity: {imageOpacity}" src={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`} alt={`Poster image of ${movieDetail.title}`} class="single__img">
+        <img src={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`} alt={`Poster image of ${movieDetail.title}`} class="single__img">
       </div>
       <div class="single__content">
         <h2 class="content__title"><IconOverview /> Overview</h2>
@@ -161,18 +152,7 @@ const money = new Intl.NumberFormat('us',
 }
 .skeleton {
   grid-area: 1/1;
-  background-image: linear-gradient(90deg, var(--gray) 0px, var(--gray-2) 50%, var(--gray) 100%);
-  background-color: var(--gray);
-  background-size: 200%;
-  animation: skeleton 1500ms infinite linear;
-}
-@keyframes skeleton {
-  from {
-    background-position: 0px;
-  }
-  to {
-    background-position: -200%;
-  }
+  background: var(--gradient);
 }
 .single__img {
   border-radius: 16px;
