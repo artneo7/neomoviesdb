@@ -1,7 +1,7 @@
 <script>
 import { MetaTags } from "svelte-meta-tags";
-import LogoTheMovieDb from "../components/icons/LogoTheMovieDb.svelte";
 import Title from "../components/Title.svelte";
+import LogoTheMovieDb from "../components/icons/LogoTheMovieDb.svelte";
 </script>
 
 <MetaTags
