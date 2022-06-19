@@ -1,7 +1,7 @@
 <script>
 import { MetaTags } from "svelte-meta-tags";
+import Logo from "../components/icons/Logo.svelte";
 import Title from "../components/Title.svelte";
-import LogoTheMovieDb from "../components/icons/LogoTheMovieDb.svelte";
 </script>
 
 <MetaTags
@@ -20,7 +20,7 @@ import LogoTheMovieDb from "../components/icons/LogoTheMovieDb.svelte";
       <div class="about__content-wrapper">
         <div class="about__content">
           <div class="logo__wrapper">
-            <LogoTheMovieDb />
+            <Logo />
           </div>
           <p class="about__text">This site uses the TMDB API but is not endorsed or certified by TMDB.</p>
         </div>
