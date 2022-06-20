@@ -99,7 +99,7 @@ const getResults = async () => {
         {@const length = `${movie.vote_average}`.length}
         {#if movie.poster_path}
         <a sveltekit:prefetch href={`/movie/${movie.id}`} class="movie-wrapper">
-          <div class="movie" style="background-image: url({'http://image.tmdb.org/t/p/w500' + movie.poster_path})" in:fly={{ y: -8, duration: 300 }}>
+          <div class="movie" style="background-image: url({'https://image.tmdb.org/t/p/w500' + movie.poster_path})" in:fly={{ y: -8, duration: 300 }}>
             {#if movie.vote_average != 0}
             <span class="rating">{movie.vote_average}{length < 3 ? '.0' : ''}</span>
             {/if}
