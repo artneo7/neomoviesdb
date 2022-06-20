@@ -7,8 +7,17 @@ import Title from "../components/Title.svelte";
 <MetaTags
   title = "About"
   titleTemplate="%s | NeoMoviesDB"
+  description="Personal project to learn about Svelte.js"
   noindex
   nofollow
+  openGraph={{
+    title: 'About',
+    description: 'Personal project to learn about Svelte.js',
+    images: [
+      { url: '/images/default-image.jpg' }
+    ],
+    site_name: 'NeoMoviesDB'
+  }}
 />
 
 <main>

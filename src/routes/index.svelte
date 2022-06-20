@@ -25,6 +25,14 @@ import { MetaTags } from 'svelte-meta-tags';
   title="NeoMoviesDB"
   noindex
   nofollow
+  openGraph={{
+    title: 'NeoMoviesDB',
+    description: 'Personal project to learn about Svelte.js',
+    images: [
+      { url: '/images/default-image.jpg' }
+    ],
+    site_name: 'NeoMoviesDB'
+  }}
 />
 
 <main>
