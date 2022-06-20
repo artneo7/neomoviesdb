@@ -177,6 +177,12 @@ const getResults = async () => {
   transform: translate3d(0,0,0);
   transition: 450ms;
 }
+@supports not (aspect-ratio: 2/3) {
+  .movie {
+    width: 100%;
+    padding-top: 150%;
+  }
+}
 .movie::after {
   content: '';
   background-color: rgba(0,0,0,.55);
