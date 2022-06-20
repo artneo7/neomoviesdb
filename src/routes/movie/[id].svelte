@@ -153,6 +153,7 @@ const money = new Intl.NumberFormat('us',
 .skeleton {
   grid-area: 1/1;
   background: var(--gradient);
+  width: fit-content;
 }
 .single__img {
   border-radius: 16px;
@@ -199,7 +200,7 @@ const money = new Intl.NumberFormat('us',
 @media(max-width: 600px) {
   .content__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px 20px;
   }
   .title {
@@ -207,9 +208,6 @@ const money = new Intl.NumberFormat('us',
   }
 }
 @media(max-width: 400px) {
-  .content__list {
-    grid-template-columns: 1fr;
-  }
   .single__img {
     min-width: unset;
   }
